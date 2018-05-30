@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Men name="xiaoming"/>
+    <Men @seyHello="seyHello" name="xiaoming"/>
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
   components: {
     HelloWorld,
     Men
+  },
+  methods: {
+    seyHello(name) {
+      alert('hello' + name)
+    }
   }
 }
 </script>
